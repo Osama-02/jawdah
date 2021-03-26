@@ -1,0 +1,316 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 65.3125em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 52.8125em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: #f9f9f9; }
+
+.container {
+  max-width: 1045px;
+  margin: 0 auto;
+  padding-top: 70px; }
+  @media only screen and (max-width: 52.8125em) {
+    .container {
+      max-width: 617px !important; } }
+  @media only screen and (max-width: 65.3125em) {
+    .container {
+      max-width: 830px; } }
+  @media only screen and (max-width: 39.625em) {
+    .container {
+      max-width: 408px !important; } }
+  @media only screen and (max-width: 25.5em) {
+    .container {
+      max-width: 320px !important; } }
+
+@font-face {
+  font-family: "Droid-Arabic-Kufi";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ArbFONTS-DroidKufi-Regular.ttf"); }
+
+@font-face {
+  font-family: "Droid-Arabic-Kufi";
+  font-style: bold;
+  font-weight: 800;
+  src: url("../fonts/ArbFONTS-DroidKufi-Bold.ttf"); }
+
+body {
+  font-family: "Droid-Arabic-Kufi", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7; }
+
+.flex {
+  width: 100%;
+  display: flex; }
+
+.justify-between {
+  justify-content: space-between; }
+
+.align-center {
+  align-items: center; }
+
+.w-full {
+  width: 100%; }
+
+.my-8 {
+  margin: 8px 0; }
+
+.header {
+  background-color: #fff;
+  width: 100%;
+  height: 75px;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header__side-nav {
+    font-size: 20px;
+    color: #707070; }
+  .header__logo {
+    width: 183.5px;
+    justify-self: center; }
+  .header__user-control {
+    height: 20px;
+    display: flex;
+    align-items: center; }
+    .header__user-control__title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #626262; }
+    .header__user-control__image {
+      margin-right: 20px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%; }
+    @media only screen and (max-width: 25.5em) {
+      .header__user-control {
+        display: none; } }
+
+.breadcrumb-search {
+  height: 40px;
+  width: 100%;
+  padding: 0 40px;
+  background-color: #2e4067;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media only screen and (max-width: 39.625em) {
+    .breadcrumb-search {
+      padding: 0 15px !important; } }
+  @media only screen and (max-width: 39.625em) {
+    .breadcrumb-search {
+      padding: 0 5px !important; } }
+  .breadcrumb-search .breadcrumb__link, .breadcrumb-search .breadcrumb__link:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px; }
+  .breadcrumb-search .breadcrumb .active {
+    color: #ffd598; }
+  .breadcrumb-search .breadcrumb__arrow {
+    color: #fff;
+    margin: 0 5px; }
+  .breadcrumb-search .search {
+    display: flex;
+    align-items: center; }
+    .breadcrumb-search .search__input {
+      font-family: inherit;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      width: 180px;
+      padding: 0 10px;
+      height: 25px;
+      outline: none; }
+      @media only screen and (max-width: 39.625em) {
+        .breadcrumb-search .search__input {
+          width: 130px !important; } }
+      .breadcrumb-search .search__input::placeholder {
+        color: #fff; }
+    .breadcrumb-search .search button {
+      border: none;
+      background-color: transparent;
+      width: 26px;
+      height: 26px;
+      outline: none;
+      cursor: pointer; }
+    .breadcrumb-search .search__button {
+      color: #fff;
+      font-size: 14px; }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 88px; }
+  .stats > * {
+    margin-bottom: 10px; }
+    .stats > *:not(:last-child) {
+      margin-left: 10px; }
+    @media only screen and (max-width: 39.625em) {
+      .stats > *:nth-of-type(odd) {
+        margin-left: 0; } }
+    @media only screen and (max-width: 39.625em) {
+      .stats > * {
+        margin-left: 0 !important; } }
+  .stats__info {
+    position: relative;
+    width: 199px;
+    height: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px;
+    color: #bababa;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 4px 5px 0 rgba(113, 113, 113, 0.08); }
+    @media only screen and (max-width: 25.5em) {
+      .stats__info {
+        width: 408px !important; } }
+    .stats__info-large {
+      width: 400px !important; }
+      @media only screen and (max-width: 52.8125em) {
+        .stats__info-large {
+          width: 617px !important;
+          margin-left: 0 !important; } }
+      @media only screen and (max-width: 39.625em) {
+        .stats__info-large {
+          width: 408px !important; } }
+    .stats__info__title {
+      color: #34508a; }
+    .stats__info__icon {
+      font-size: 14px;
+      color: #34508a; }
+    .stats__info .print {
+      cursor: pointer;
+      width: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 16px;
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      font-family: inherit;
+      outline: none;
+      transition: all .2s; }
+      .stats__info .print:hover {
+        background-color: #e7e7e7; }
+      .stats__info .print__title {
+        font-size: 12px;
+        color: #2d2e2e;
+        font-weight: 800; }
+      .stats__info .print__icon {
+        margin-left: 2px; }
+
+.popup-msg-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #374668;
+  opacity: 0.85;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none; }
+
+.isVisible {
+  opacity: 1 !important; }
+
+.popup-msg {
+  margin: 0 auto;
+  max-width: 600px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 123px;
+  opacity: 0;
+  transition: opacity .5s ease-in-out; }
+  .popup-msg__head {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 14px 0;
+    box-shadow: 0 1.5px 0px rgba(0, 0, 0, 0.1);
+    position: relative; }
+    .popup-msg__head .close-icon {
+      position: absolute;
+      top: 35%;
+      right: 20px;
+      font-size: 20px;
+      color: #e63b3b;
+      cursor: pointer; }
+    .popup-msg__head h3 {
+      color: #2d2e2e;
+      font-size: 16px;
+      font-family: "Droid-Arabic-Kufi";
+      font-style: bold; }
+  .popup-msg__body {
+    margin-top: 40px;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+    margin: 15px auto 0 auto; }
+    .popup-msg__body h3 {
+      color: #767676;
+      font-size: 14px;
+      font-family: "Droid-Arabic-Kufi";
+      font-weight: 400; }
+    .popup-msg__body .action-buttons {
+      margin-top: 20px; }
+      .popup-msg__body .action-buttons > * {
+        margin: 5px; }
+      .popup-msg__body .action-buttons .btn {
+        font-family: inherit;
+        border: none;
+        padding: 3px 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .2s;
+        outline: none; }
+        .popup-msg__body .action-buttons .btn:active {
+          transform: translateY(2px) scale(0.98); }
+        .popup-msg__body .action-buttons .btn:hover {
+          filter: brightness(90%); }
+        .popup-msg__body .action-buttons .btn-confirm {
+          background-color: #e63b3b;
+          color: #fff; }
+        .popup-msg__body .action-buttons .btn-cancel {
+          background-color: #dbe7ff;
+          color: #555a64; }

@@ -1,0 +1,110 @@
+.popup-msg-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #374668;
+    opacity: 0.85;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: none;
+}
+.isVisible{
+    opacity: 1 !important;
+}
+.popup-msg{
+    margin: 0 auto;
+    max-width: 600px;
+    // min-width: 320px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+    margin-top: 123px;
+    
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+
+
+
+    &__head{
+        
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        padding: 14px 0;
+        box-shadow: 0 1.5px 0px rgba(0,0,0, 0.1);
+
+        position: relative;
+
+        .close-icon{
+            position: absolute;
+            top: 35%;
+            right: 20px;
+            font-size: 20px;
+            color: #e63b3b;
+            cursor: pointer;
+        }
+
+        h3{
+            color: #2d2e2e;
+            font-size: 16px;
+            font-family: "Droid-Arabic-Kufi";
+            font-style: bold;
+        }
+    }
+    &__body{
+        margin-top: 40px;
+        padding: 10px;
+        width: 70%;
+        text-align: center;
+        margin: 15px auto 0 auto;
+        h3{
+            color: #767676;
+            font-size: 14px;
+            font-family: "Droid-Arabic-Kufi";
+            font-weight: 400;
+        }
+        .action-buttons{
+            margin-top: 20px;
+            
+            &>* {
+                margin:5px;
+            }
+
+            .btn{
+                font-family: inherit;
+                border: none;
+                padding: 3px 18px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all .2s;
+
+                outline: none;
+
+                &:active{
+                    transform: translateY(2px) scale(.98);
+                }
+                &:hover{
+                    filter: brightness(90%);
+                   
+                }
+
+                &-confirm{
+                    background-color: #e63b3b;
+                    color: #fff;
+                }
+
+                &-cancel{
+                    background-color: #dbe7ff;
+                    color: #555a64;
+                }
+            }
+            
+        }
+    }
+
+}

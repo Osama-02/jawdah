@@ -1,0 +1,66 @@
+.header {
+    background-color: #fff;
+    width: 100%;
+    height: 75px;
+
+    padding: 0px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__side-nav{
+        font-size: 20px;
+        color: #707070;
+    }
+
+    &__logo{
+        width: 183.5px;
+        justify-self: center;
+        
+    }
+
+    &__user-control{
+        height: 20px;
+        // width: 150px;
+        // background-color: green;
+
+        display: flex;
+        align-items: center;
+
+        &__title{
+            font-size: 12px;
+            font-weight: 800;
+            color: #626262;
+        }
+        &__image{
+            margin-right: 20px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+
+        @include respond(smallphone) {
+            display: none;
+        }
+    }
+   
+
+    // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    //         only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    //         only screen and (min-width: 125em) {
+    //     background-image: linear-gradient(
+    //         to right bottom,
+    //         rgba($color-primary-light, 0.8),
+    //         rgba($color-primary-dark, 0.8)),
+    //     url(../img/hero.jpg);
+    // }
+
+    // @include respond(phone) {
+    //     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    //     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    // }
+
+   
+}
