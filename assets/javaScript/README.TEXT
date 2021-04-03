@@ -1,0 +1,50 @@
+TO ADD COLLAPSE ANY WHERE YO HAVE 3 THINGS TO DO:
+
+    1- MAKE A BUTTON (OR ANY) AND GIVE IT ID AND ONCLICK ATTRIBUTE WITH THIS FUNCTION AS VALUE [toggleCollapse(event)]
+        -EX: <i id="first-tab" onclick="toggleCollapse(event)"
+        
+    2- TO TOGGLE ANY ELEMENT WITH THIS BUTTON:
+            - JUST GIVE IT THE SAME ID + "-body"
+            - ADD CLASS "collapse" TO THE ELEMENT
+
+            -EX: <div id="first-tab-body" class="ratings__body collapse"></div>
+
+    TO EDIT SETTINGS
+    /javaScript/collapse.js
+--------------------------------------------------------------------------------------------------------------------------------
+TO ADD TAB JUST FOLLOW THESE STEPS:
+    - TO ACTIVE A TAB BY DEFAULT ADD THIS CLASS "tab-active", TO SHOW A BODY BY DEFAULT ADD THIS CLASS "tabs__body-active".
+        
+    1- MAKE A TAB AND GIVE IT CLASS "tabs__tab" AND ID
+            -EX: <div class="tabs__tab" id="tab2">
+
+    2- TO TOGGLE ANY ELEMENT WITH THIS TAB:
+            - JUST GIVE IT THE SAME ID + "-body"
+            - ADD CLASS "tabs__body" TO THE ELEMENT
+
+            -EX: <div class="tabs__body tabs__body-active" id="tab1-body">
+
+    TO EDIT SETTINGS
+    /javaScript/tabs.js
+--------------------------------------------------------------------------------------------------------------------------------
+FOR ICONS I USED FONT AWESOME:
+   https://fontawesome.com/icons
+
+--------------------------------------------------------------------------------------------------------------------------------
+FOR CAROUSEL I USED OWL CAROUSEL :
+    https://owlcarousel2.github.io/OwlCarousel2/index.html
+    
+    -- DOCS
+    https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+
+    TO EDIT SETTINGS:
+    /javaScript/carousel.js
+
+--------------------------------------------------------------------------------------------------------------------------------
+FOR CHARTS I USED THIS TOOL :
+    https://github.com/lugolabs/circles
+
+    TO EDIT SETTINGS:
+    /javaScript/circular-chart.js
+
+--------------------------------------------------------------------------------------------------------------------------------

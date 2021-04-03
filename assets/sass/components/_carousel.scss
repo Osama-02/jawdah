@@ -1,0 +1,43 @@
+.slide{
+    height: 250px;
+    width: 450px;
+    overflow: hidden;
+    @include respond(phone) {
+        width: 310px;
+    }
+
+    &__item{
+        width: 150px;
+        height: 150px;
+        // margin: 0 5px;
+    }
+
+    &__title{
+        color: #bfbfbf !important;
+        margin: 40px 0 10px 0 !important;
+    }
+
+}
+.owl-carousel{
+    
+
+}
+
+.owl-nav{
+    .owl-prev{
+        position: absolute;
+        top: 1%;
+        left: 0;
+        background: rgba(0,0,0,.8) !important;
+        font-size: 80px !important;
+        outline: none;
+    }
+    .owl-next{
+        position: absolute;
+        top: 1%;
+        right: 0;
+        background: rgba(0,0,0,.8) !important;
+        font-size: 80px !important;
+        outline: none;
+    }
+}
