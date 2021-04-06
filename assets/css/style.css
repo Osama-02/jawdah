@@ -691,5 +691,5 @@ body {
   font-size: 80px !important;
   outline: none; }
 
-.collapse-open {
-  transform: rotate(180deg); }
+.collapse {
+  display: none; }

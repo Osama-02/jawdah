@@ -1,5 +1,6 @@
 $( document ).ready(()=>{
-    $('.collapse').slideUp()
+    $('.collapse').slideUp() 
+
 })
 
 let toggleCollapse = function(event){
