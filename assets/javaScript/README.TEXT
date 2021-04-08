@@ -1,7 +1,7 @@
 TO ADD COLLAPSE ANY WHERE YO HAVE 3 THINGS TO DO:
 
     1- MAKE A BUTTON (OR ANY) AND GIVE IT ID AND ONCLICK ATTRIBUTE WITH THIS FUNCTION AS VALUE [toggleCollapse(event)]
-        -EX: <i id="first-tab" onclick="toggleCollapse(event)"
+        -EX: <div id="first-tab" onclick="toggleCollapse(event)"
         
     2- TO TOGGLE ANY ELEMENT WITH THIS BUTTON:
             - JUST GIVE IT THE SAME ID + "-body"

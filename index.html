@@ -98,7 +98,7 @@
 
             <!-- COLLAPSE--1 -->
             <div class="ratings__info">
-                <div class="ratings__head">
+                <div class="ratings__head" id="first-tab" onclick="toggleCollapse(event)">
                     <!-- TITLE -->
                     <h3 class="ratings__head__title">تقييم المحكم النهائي</h3>
 
@@ -119,7 +119,7 @@
                     </div>
 
                     <!-- // DROPDOWN ICON -->
-                    <i id="first-tab" onclick="toggleCollapse(event)"
+                    <i 
                         class="ratings__head__dropdown fas fa-chevron-down"></i>  
                 </div>
 
@@ -127,7 +127,7 @@
                 <div id="first-tab-body" class="ratings__body collapse">
                 <!-- STANDARD--->
                     <div class="standard">
-                        <div class="standard__head">
+                        <div class="standard__head" id="first-standard-1" onclick="toggleCollapse(event)">
                             <h3 class="standard__head__title">معيار الأصالة</h3>
                             <div class="standard__head__rating">
                                 <span style="color: #969696; font-size: 14px; font-weight: bold;">100</span>
@@ -135,7 +135,7 @@
                                 <span
                                     style="color: #fff; font-size: 18px; margin-top: 5px; font-weight: bold;">65</span>
                             </div>
-                            <i id="first-standard-1" onclick="toggleCollapse(event)"
+                            <i 
                                 class="standard__head__icon fas fa-chevron-down"></i>
                         </div>
                         <div id="first-standard-1-body" class="standard__body collapse">

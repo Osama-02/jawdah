@@ -6,12 +6,14 @@ $( document ).ready(()=>{
 let toggleCollapse = function(event){
     let button = event.target.id
     let container = $(`#${button}-body`)
+    let dropdownIcon = event.target.children[2]
+    
 
-    if(  $(event.target).hasClass('collapse-open')  ){
-        $(event.target).removeClass("collapse-open");
+    if(  $(dropdownIcon).hasClass('collapse-open')  ){
+        $(dropdownIcon).removeClass("collapse-open");
         container.slideUp()
     }else{
-        $(event.target).addClass("collapse-open");
+        $(dropdownIcon).addClass("collapse-open");
         container.slideDown()
         
     }
